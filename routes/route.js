@@ -7,6 +7,9 @@ import { userLogin, userSignup } from "../Controller/userController.js";
 
 const router = express.Router();
 
+router.get("/", (req,res)=>{
+    res.send("welcome server site")
+})
 router.post("/signup", userSignup)
 router.post("/login", userLogin)
 router.get("/furnitures", getFurnitures);
