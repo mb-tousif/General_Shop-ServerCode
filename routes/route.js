@@ -1,7 +1,7 @@
 import express from "express";
-import { getFashionData } from "../Controller/fashionController.js";
-import { getFurnitures } from "../Controller/furnitureController.js";
-import { getTopOffers } from "../Controller/topOfferController.js";
+import { getFashionById, getFashionData } from "../Controller/fashionController.js";
+import { getFurnitureById, getFurnitures } from "../Controller/furnitureController.js";
+import { getTopOfferById, getTopOffers } from "../Controller/topOfferController.js";
 import { userLogin, userSignup } from "../Controller/userController.js";
 
 
@@ -15,5 +15,8 @@ router.post("/login", userLogin)
 router.get("/furnitures", getFurnitures);
 router.get("/topOffers", getTopOffers);
 router.get("/fashion", getFashionData);
+router.get("/furniture/:id", getFurnitureById);
+router.get("/topOffer/:id", getTopOfferById);
+router.get("/fashion/:id", getFashionById);
 
 export default router;

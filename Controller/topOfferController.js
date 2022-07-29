@@ -12,3 +12,13 @@ export const getTopOffers = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+export const getTopOfferById = async (req, res) => {
+  try {
+    // const id = req.params.id
+    const topOffer = await TopOffer.findOne({ "_id": req.params.id });
+    res.status(200).json(topOffer)
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
+}
