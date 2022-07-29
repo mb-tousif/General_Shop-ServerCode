@@ -15,8 +15,8 @@ router.post("/login", userLogin)
 router.get("/furnitures", getFurnitures);
 router.get("/topOffers", getTopOffers);
 router.get("/fashions", getFashionData);
-router.get("/furnitures/:id", getFurnitureById);
-router.get("/topOffers/:id", getTopOfferById);
-router.get("/fashions/:id", getFashionById);
+router.get("/furniture/:id", getFurnitureById);
+router.get("/topOffer/:id", getTopOfferById);
+router.get("/fashion/:id", getFashionById);
 
 export default router;
