@@ -14,6 +14,7 @@ export const getFashionById = async (req, res) => {
     // const id = req.params.id;
     const fashion = await Fashion.findOne({"_id": req.params.id});
     res.status(200).json(fashion)
+    console.log(fashion);
   } catch (error) {
     res.status(500).json({message: error.message})
   }
