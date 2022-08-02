@@ -15,6 +15,7 @@ router.post("/login", userLogin)
 router.get("/furnitures", getFurnitures);
 router.get("/topOffers", getTopOffers);
 router.get("/fashions", getFashionData);
+// single product API
 router.get("/furniture/:id", getFurnitureById);
 router.get("/topOffer/:id", getTopOfferById);
 router.get("/fashion/:id", getFashionById);
